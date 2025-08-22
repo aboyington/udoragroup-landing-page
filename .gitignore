@@ -1,0 +1,33 @@
+# System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Development Files
+*.codekit3
+*.log
+error_log
+
+# Sass Cache
+.sass-cache/
+*.css.map
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Archives
+*.zip
+*.tar.gz
+*.rar

@@ -1,0 +1,29 @@
+{
+  "name": "Udora Group - Web Development & Telecommunications Solutions",
+  "short_name": "Udora Group",
+  "description": "Udora Group specializes in custom web development, mobile applications, cloud solutions, and telecommunications services. We build modern, scalable digital solutions for businesses of all sizes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#F15927",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

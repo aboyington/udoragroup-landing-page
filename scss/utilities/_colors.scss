@@ -1,0 +1,35 @@
+// Color Palette
+// examples based on the official Sass styleguide
+
+// descriptive colors
+// =============
+
+// Black
+$black: #000;
+$tundora: #4D4D4D;
+
+// Grey
+$wild-sand: #F6F6F6;
+$mercury: #E6E6E6;
+
+// Others
+$husk: #AD974F;
+
+
+// main color palette
+$color-accent:              $husk;
+
+// // Common colors
+$color-background:          $wild-sand;
+$color-background-darker:   $mercury;
+
+$color-text:                $tundora;
+
+// Links
+$color-link:                $color-accent;
+$color-link-hover:          darken($husk, 10%);
+$color-link-visited:        darken($husk, 10%);
+
+// Inputs
+$color-input: #323031;
+
