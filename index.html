@@ -131,10 +131,47 @@
 
             <div class="company-block">
               <h3>Telecommunications</h3>
-              <p>
-                Network infrastructure, VoIP solutions, and telecommunications
-                consulting to keep your business connected.
-              </p>
+              <p>Network infrastructure, VoIP solutions, and telecommunications consulting to keep your business connected.</p>
+            </div>
+          </div>
+
+          <!-- Contact Section -->
+          <div class="contact-section">
+            <h3>Ready to Start Your Project?</h3>
+            <p>Get in touch today: <a href="mailto:hello@udoragroup.com" class="email-link">hello@udoragroup.com</a></p>
+            
+            <div class="quick-form">
+              <form class="contact-form" id="contactForm" action="contact-handler.php" method="POST">
+                <div class="form-row">
+                  <div class="group half-width">
+                    <input type="text" name="name" class="form-control-2" required />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label class="label-2">Name</label>
+                  </div>
+                  
+                  <div class="group half-width">
+                    <input type="email" name="email" class="form-control-2" required />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label class="label-2">Email</label>
+                  </div>
+                </div>
+                
+                <div class="group">
+                  <textarea name="message" class="form-control-2" rows="3" required></textarea>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label class="label-2">Tell us about your project</label>
+                </div>
+                
+                <button type="submit" class="contact-submit-btn" id="submitBtn">
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-loading" style="display: none;">Sending...</span>
+                </button>
+              </form>
+              
+              <div id="formMessage" class="form-message" style="display: none;"></div>
             </div>
           </div>
         </div>
@@ -186,6 +223,65 @@
         });
 
         console.log('YTPlayer initialization called');
+        
+        // Contact form handling
+        $('#contactForm').on('submit', function(e) {
+          e.preventDefault();
+          
+          const form = $(this);
+          const submitBtn = $('#submitBtn');
+          const btnText = submitBtn.find('.btn-text');
+          const btnLoading = submitBtn.find('.btn-loading');
+          const messageDiv = $('#formMessage');
+          
+          // Show loading state
+          btnText.hide();
+          btnLoading.show();
+          submitBtn.prop('disabled', true);
+          messageDiv.hide();
+          
+          // Submit form via AJAX
+          $.ajax({
+            url: form.attr('action'),
+            method: 'POST',
+            data: form.serialize(),
+            dataType: 'json'
+          })
+          .done(function(response) {
+            if (response.success) {
+              messageDiv.removeClass('error').addClass('success');
+              messageDiv.text(response.message).fadeIn();
+              form[0].reset();
+              
+              // Reset form labels
+              form.find('.form-control-2').each(function() {
+                $(this).removeClass('form-control-2--not-empty');
+              });
+            } else {
+              messageDiv.removeClass('success').addClass('error');
+              messageDiv.text(response.message).fadeIn();
+            }
+          })
+          .fail(function() {
+            messageDiv.removeClass('success').addClass('error');
+            messageDiv.text('Sorry, there was an error sending your message. Please try again or contact us directly at hello@udoragroup.com.').fadeIn();
+          })
+          .always(function() {
+            // Reset button state
+            btnLoading.hide();
+            btnText.show();
+            submitBtn.prop('disabled', false);
+          });
+        });
+        
+        // Handle form field focus states for labels
+        $('.form-control-2').on('blur', function() {
+          if ($(this).val()) {
+            $(this).addClass('form-control-2--not-empty');
+          } else {
+            $(this).removeClass('form-control-2--not-empty');
+          }
+        });
       });
     </script>
 

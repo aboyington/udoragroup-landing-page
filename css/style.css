@@ -89,3 +89,114 @@ body {
     flex: 1 1 calc(50% - 0.75em);
   }
 }
+
+/* Contact Section Styles */
+.contact-section {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.contact-section h3 {
+  color: #F15927;
+  margin-bottom: 0.5em;
+  font-size: 1.8em;
+}
+
+.email-link {
+  color: #F15927;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: #ef470f;
+}
+
+.quick-form {
+  margin-top: 2em;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-row {
+  display: flex;
+  gap: 1em;
+}
+
+.half-width {
+  flex: 1;
+}
+
+.contact-submit-btn {
+  width: 100%;
+  background-color: #F15927;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact-submit-btn:hover {
+  background-color: #ef470f;
+  transform: translateY(-1px);
+}
+
+/* Make textarea work with existing form styles */
+.form-control-2[rows] {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Form message styles */
+.form-message {
+  margin-top: 1em;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-message.success {
+  background-color: rgba(92, 184, 92, 0.1);
+  border: 1px solid #5cb85c;
+  color: #5cb85c;
+}
+
+.form-message.error {
+  background-color: rgba(217, 83, 79, 0.1);
+  border: 1px solid #d9534f;
+  color: #d9534f;
+}
+
+/* Button loading state */
+.contact-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .contact-section h3 {
+    font-size: 1.5em;
+  }
+  
+  .contact-form {
+    max-width: 100%;
+  }
+}
