@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Main Homepage -->
+  <url>
+    <loc>https://udoragroup.com/</loc>
+    <lastmod>2025-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Logo Image -->
+    <image:image>
+      <image:loc>https://udoragroup.com/img/logo.svg</image:loc>
+      <image:caption>Udora Group Logo - Web Development, Digital Marketing &amp; Telecommunications Solutions</image:caption>
+      <image:title>Udora Group</image:title>
+    </image:image>
+    
+    <!-- Favicon Images -->
+    <image:image>
+      <image:loc>https://udoragroup.com/favicon-192.png</image:loc>
+      <image:caption>Udora Group Favicon</image:caption>
+      <image:title>Udora Group Icon</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://udoragroup.com/favicon-512.png</image:loc>
+      <image:caption>Udora Group High Resolution Icon</image:caption>
+      <image:title>Udora Group 512px Icon</image:title>
+    </image:image>
+  </url>
+
+</urlset>

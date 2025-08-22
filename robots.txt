@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://udoragroup.com/sitemap.xml
+
+# Disallow crawling of admin/backend files
+Disallow: /contact-handler.php
+Disallow: /*.php$
+
+# Allow all image types
+User-agent: Googlebot-Image
+Allow: /img/
+Allow: /images/
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.png
+Allow: *.svg
+Allow: *.webp
+
+# Specific crawl delays for different bots
+User-agent: Bingbot
+Crawl-delay: 1
+
+User-agent: Slurp
+Crawl-delay: 1
+
+# Block common bad bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
