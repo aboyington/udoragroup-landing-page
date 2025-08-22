@@ -1,6 +1,6 @@
 # Udora Group Landing Page
 
-A modern, responsive landing page for Udora Group showcasing their technology services including web development, mobile applications, cloud solutions, and telecommunications.
+A modern, responsive landing page for Udora Group showcasing their technology services including web development, mobile applications, digital marketing, and telecommunications.
 
 ![Udora Group](img/logo.svg)
 
@@ -23,7 +23,7 @@ A modern, responsive landing page for Udora Group showcasing their technology se
 ### Services Showcase
 - **Web Development**: Custom websites, e-commerce platforms, and web applications
 - **Mobile Applications**: Native and cross-platform mobile app development
-- **Cloud Solutions**: Scalable cloud infrastructure and API development
+- **Digital Marketing**: Partnering with Ronin Trade Marketing for comprehensive marketing solutions
 - **Telecommunications**: Network infrastructure and VoIP solutions
 
 ## 🛠️ Technology Stack
